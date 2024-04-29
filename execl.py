@@ -3,9 +3,9 @@ import openpyxl
 import pandas as pd
 
 
-def read_execle(name):
+def get_bk_source_data():
     # 打开 Excel 文件
-    workbook = openpyxl.load_workbook(name)
+    workbook = openpyxl.load_workbook("source/板块列表.xlsx")
     # 选择工作表，可以通过工作表的名称或索引来选择
     sheet = workbook["Sheet1"]  # 或者通过索引：sheet = workbook.worksheets[0]
     arr = []
@@ -32,3 +32,5 @@ def export_excel(export):
     pf.to_excel(file_path, index=False)
     # 保存表格
     file_path.close()
+
+

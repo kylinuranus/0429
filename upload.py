@@ -83,7 +83,6 @@ def read_data():
     arr.pop(0)
     return arr
 
-
 def upload(cookie, id, gid):
     sc = "0$"
     if id.startswith("0") == True:
